@@ -31,7 +31,10 @@ book3.author = "이일민"
 
 var myBook = BookManager()
 
-myBook.addBook(bookObject: book1)
-myBook.addBook(bookObject: book2)
-myBook.addBook(bookObject: book3)
+myBook.addBook(book1)
+myBook.addBook(book2)
+myBook.addBook(book3)
 
+print(myBook.showAllBook())
+
+print(myBook.countBook())
