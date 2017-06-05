@@ -38,3 +38,16 @@ myBook.addBook(book3)
 print(myBook.showAllBook())
 
 print(myBook.countBook())
+
+//var findResult = myBook.findBook("토비의 스프링")
+var findResult = myBook.findBook("test")
+
+if findResult != nil {
+    print("\(findResult!) 를 찾았습니다.")
+} else {
+    print("찾으시는 책이 없습니다.")
+}
+
+myBook.removeBook("룬의아이들")
+
+print(myBook.showAllBook())

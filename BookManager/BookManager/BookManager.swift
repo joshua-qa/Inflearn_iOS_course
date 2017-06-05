@@ -30,11 +30,26 @@ class BookManager {
         return bookList.count
     }
     
-    func findBook() {
+    func findBook(_ name:String) -> String? {
+        var strTemp = ""
+        for bookTemp in bookList {
+            if bookTemp.name == name {
+                strTemp += "Name : \(bookTemp.name)\n"
+                strTemp += "Genre : \(bookTemp.genre)\n"
+                strTemp += "Author : \(bookTemp.author)"
+                return strTemp
+            }
+        }
         
+        return nil
     }
     
-    func removeBook() {
-        
+    func removeBook(_ name:String) {
+        for bookTemp in bookList {
+            if bookTemp.name == name {
+                let index = (bookList as NSArray).index(of: bookTemp)
+                bookList.remove(at: index)
+            }
+        }
     }
 }
