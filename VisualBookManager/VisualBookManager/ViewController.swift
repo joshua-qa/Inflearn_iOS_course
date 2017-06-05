@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet var genreTextField:UITextField!
     @IBOutlet var authorTextField:UITextField!
     
+    @IBOutlet var countLabel:UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,6 +44,8 @@ class ViewController: UIViewController {
         myBook.addBook(book1)
         myBook.addBook(book2)
         myBook.addBook(book3)
+        
+        countLabel.text = "\(myBook.countBook())"
     }
     
     @IBAction func showAllBookAction(_ sender:AnyObject) {
