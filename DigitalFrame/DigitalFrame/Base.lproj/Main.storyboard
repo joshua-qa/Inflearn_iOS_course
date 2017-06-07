@@ -28,8 +28,11 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="oGS-8p-9YN">
                                 <rect key="frame" x="14" y="571" width="271" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="changeSpeedAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="51a-ch-gqf"/>
+                                </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZE-0r-9f5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZE-0r-9f5">
                                 <rect key="frame" x="291" y="576" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -49,6 +52,8 @@
                     </view>
                     <connections>
                         <outlet property="imgView" destination="6pz-aY-swL" id="ad9-IU-6bX"/>
+                        <outlet property="speedLabel" destination="kZE-0r-9f5" id="bRl-xv-FwT"/>
+                        <outlet property="speedSlider" destination="oGS-8p-9YN" id="RW2-Un-0Vv"/>
                         <outlet property="toggleButton" destination="BEs-1M-y1V" id="Lz3-8d-3Ix"/>
                     </connections>
                 </viewController>
