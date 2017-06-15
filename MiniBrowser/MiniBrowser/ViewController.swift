@@ -8,11 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate {
 
     @IBOutlet var bookMarkSegmentedControl: UISegmentedControl!
     @IBOutlet var urlTextField: UITextField!
     @IBOutlet var mainWebView: UIWebView!
+    @IBOutlet var spinningActivityIndicatorView: UIActivityIndicatorView!
     
     @IBAction func bookMarkAction(_ sender: AnyObject) {
         let bookMarkUrl = bookMarkSegmentedControl.titleForSegment(at: bookMarkSegmentedControl.selectedSegmentIndex)!
@@ -33,10 +34,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         let urlString = "https://www.facebook.com"
         mainWebView.loadRequest(URLRequest(url: URL(string: urlString)!))
         urlTextField.text = urlString
+    }
+    
+    func webViewDidStartLoad(_ webView: UIWebView) {
+        spinningActivityIndicatorView.startAnimating()
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        spinningActivityIndicatorView.stopAnimating()
     }
 
     override func didReceiveMemoryWarning() {

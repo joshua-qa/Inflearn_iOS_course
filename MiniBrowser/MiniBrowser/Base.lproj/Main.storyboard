@@ -49,13 +49,29 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="n1K-YJ-Q96"/>
-                                    <barButtonItem systemItem="rewind" id="9Xz-kc-EbM"/>
+                                    <barButtonItem systemItem="rewind" id="9Xz-kc-EbM">
+                                        <connections>
+                                            <action selector="goBack" destination="Ji3-cq-7jd" id="TFD-nF-Nay"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="5qL-hQ-Pwz"/>
-                                    <barButtonItem systemItem="fastForward" id="7EQ-By-WLp"/>
+                                    <barButtonItem systemItem="fastForward" id="7EQ-By-WLp">
+                                        <connections>
+                                            <action selector="goForward" destination="Ji3-cq-7jd" id="wzE-hP-61O"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="BDh-Fp-z2F"/>
-                                    <barButtonItem systemItem="stop" id="grc-fH-VQu"/>
+                                    <barButtonItem systemItem="stop" id="grc-fH-VQu">
+                                        <connections>
+                                            <action selector="stopLoading" destination="Ji3-cq-7jd" id="ich-Aq-bIR"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="pFO-J7-ddo"/>
-                                    <barButtonItem systemItem="refresh" id="baJ-wv-PZi"/>
+                                    <barButtonItem systemItem="refresh" id="baJ-wv-PZi">
+                                        <connections>
+                                            <action selector="reload" destination="Ji3-cq-7jd" id="uc1-lW-y6n"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="nGA-S8-fOT"/>
                                 </items>
                             </toolbar>
@@ -63,13 +79,22 @@
                                 <rect key="frame" x="0.0" y="80" width="375" height="543"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="A0O-b4-5g7"/>
+                                </connections>
                             </webView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="jpD-aj-9q8">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="1" green="0.578165881866052" blue="0.53715262814068154" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="bookMarkSegmentedControl" destination="qK1-1w-fbi" id="q7W-tQ-4lv"/>
                         <outlet property="mainWebView" destination="Ji3-cq-7jd" id="TYb-38-uRv"/>
+                        <outlet property="spinningActivityIndicatorView" destination="jpD-aj-9q8" id="b2g-P9-wal"/>
                         <outlet property="urlTextField" destination="9QH-MB-5Mg" id="uff-lp-3wg"/>
                     </connections>
                 </viewController>
