@@ -89,10 +89,19 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wwc-ML-kDg">
                                 <rect key="frame" x="269" y="178" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="showReturnDateAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZCx-I3-yCu"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="departureDateButton" destination="mIj-bn-pYx" id="BnI-u2-Zc0"/>
+                        <outlet property="returnDateButton" destination="Uzd-Ik-0cN" id="zkX-WI-xwt"/>
+                        <outlet property="returnDateLabel" destination="L7K-Ux-C12" id="aI9-Eg-asM"/>
+                        <outlet property="selectDatePicker" destination="Gxr-aC-jRn" id="cq4-lL-pql"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

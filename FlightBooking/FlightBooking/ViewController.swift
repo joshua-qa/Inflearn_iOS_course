@@ -10,9 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var selectDatePicker: UIDatePicker!
+    
+    @IBOutlet var departureDateButton: UIButton!
+    
+    @IBOutlet var returnDateLabel: UILabel!
+    @IBOutlet var returnDateButton: UIButton!
+    
+    @IBAction func showReturnDateAction(_ sender: Any) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        returnDateLabel.isHidden = true;
     }
 
     override func didReceiveMemoryWarning() {
