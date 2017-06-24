@@ -52,6 +52,9 @@
                                 <date key="date" timeIntervalSinceReferenceDate="519662905.31799299">
                                     <!--2017-06-20 14:48:25 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="selectedDateAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="60y-WT-kMt"/>
+                                </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Departure Date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4is-KN-I4r">
                                 <rect key="frame" x="47" y="130" width="127" height="21"/>
@@ -74,19 +77,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIj-bn-pYx">
+                            <button opaque="NO" alpha="0.80000000000000004" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIj-bn-pYx">
                                 <rect key="frame" x="221" y="126" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.58202280268980733" green="0.85425847504164409" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Select Date"/>
+                                <connections>
+                                    <action selector="showDatePickerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3iY-Mi-ojE"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uzd-Ik-0cN">
+                            <button opaque="NO" alpha="0.80000001192092896" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uzd-Ik-0cN">
                                 <rect key="frame" x="221" y="233" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.58202280269999995" green="0.85425847499999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Select Date"/>
+                                <connections>
+                                    <action selector="showDatePickerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nt2-rz-cOg"/>
+                                </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wwc-ML-kDg">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wwc-ML-kDg">
                                 <rect key="frame" x="269" y="178" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
