@@ -36,3 +36,4 @@ SelectCar/SelectCar/tesla-model-x.jpg
 SelectCar/SelectCar.xcodeproj/project.pbxproj
 SelectCar/SelectCar.xcodeproj/xcuserdata/jgchoi.qa.xcuserdatad/xcschemes/SelectCar.xcscheme
 SelectCar/SelectCar.xcodeproj/xcuserdata/jgchoi.qa.xcuserdatad/xcschemes/xcschememanagement.plist
+*.xcbkptlist

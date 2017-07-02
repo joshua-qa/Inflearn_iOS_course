@@ -13,12 +13,17 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet var imgView: UIImageView!
     
     let carCompanyName = ["Tesla","Lamborghini","Porsche"]
+    var carModel:[String] = []
     
     let tesla = ["Model S","Model X"]
     
+    let lamborghini = ["aventador","veneno","huracan"]
+    
+    let porsche = ["911","boxter"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        carModel = tesla
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -30,7 +35,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         if component == 0 {
             return carCompanyName[row]
         } else {
-            return tesla[row]
+            return carModel[row]
         }
     }
     
@@ -38,8 +43,20 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         if component == 0 {
             return carCompanyName.count
         } else {
-            return tesla.count
+            return carModel.count
         }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if component == 0 && row == 0 {
+            carModel = tesla
+        } else if component == 0 && row == 1 {
+            carModel = lamborghini
+        } else if component == 0 && row == 2 {
+            carModel = porsche
+        }
+        
+        pickerView.reloadAllComponents()
     }
     
     override func didReceiveMemoryWarning() {
