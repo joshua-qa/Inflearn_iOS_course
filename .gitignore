@@ -25,3 +25,14 @@ MiniBrowser/MiniBrowser.xcodeproj/project.xcworkspace/contents.xcworkspacedata
 FlightBooking/FlightBooking.xcodeproj/project.pbxproj
 FlightBooking/FlightBooking.xcodeproj/xcuserdata/jgchoi.qa.xcuserdatad/xcschemes/FlightBooking.xcscheme
 FlightBooking/FlightBooking.xcodeproj/xcuserdata/jgchoi.qa.xcuserdatad/xcschemes/xcschememanagement.plist
+SelectCar/SelectCar/background.jpeg
+SelectCar/SelectCar/lamborghini-aventador.jpg
+SelectCar/SelectCar/lamborghini-huracan.jpg
+SelectCar/SelectCar/lamborghini-veneno.jpg
+SelectCar/SelectCar/porsche-911.jpg
+SelectCar/SelectCar/porsche-boxter.jpg
+SelectCar/SelectCar/tesla-model-s.jpg
+SelectCar/SelectCar/tesla-model-x.jpg
+SelectCar/SelectCar.xcodeproj/project.pbxproj
+SelectCar/SelectCar.xcodeproj/xcuserdata/jgchoi.qa.xcuserdatad/xcschemes/SelectCar.xcscheme
+SelectCar/SelectCar.xcodeproj/xcuserdata/jgchoi.qa.xcuserdatad/xcschemes/xcschememanagement.plist
