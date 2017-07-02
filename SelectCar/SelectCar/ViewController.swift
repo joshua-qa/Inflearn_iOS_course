@@ -14,16 +14,23 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     let carCompanyName = ["Tesla","Lamborghini","Porsche"]
     var carModel:[String] = []
+    var carModelImage:[String] = []
     
     let tesla = ["Model S","Model X"]
-    
     let lamborghini = ["aventador","veneno","huracan"]
-    
     let porsche = ["911","boxter"]
+    
+    let teslaImageNames = ["tesla-model-s.jpg","tesla-model-x.jpg"]
+    let lamborghiniImageNames = ["lamborghini-aventador.jpg","lamborghini-veneno.jpg","lamborghini-huracan.jpg"]
+    let porscheImageNames = ["porsche-911.jpg","porsche-boxter.jpg"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         carModel = tesla
+        carModelImage = teslaImageNames
+        
+        imgView.layer.cornerRadius = 50.0
+        imgView.layer.masksToBounds = true
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -50,13 +57,21 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if component == 0 && row == 0 {
             carModel = tesla
+            carModelImage = teslaImageNames
         } else if component == 0 && row == 1 {
             carModel = lamborghini
+            carModelImage = lamborghiniImageNames
         } else if component == 0 && row == 2 {
             carModel = porsche
+            carModelImage = porscheImageNames
         }
         
-        pickerView.reloadAllComponents()
+        pickerView.reloadComponent(1)
+        if component == 0 {
+            pickerView.selectRow(0, inComponent: 1, animated: true)
+        }
+        
+        imgView.image = UIImage(named: carModelImage[pickerView.selectedRow(inComponent: 1)])
     }
     
     override func didReceiveMemoryWarning() {
