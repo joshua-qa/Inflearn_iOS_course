@@ -93,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="933.60000000000002" y="394.45277361319341"/>
         </scene>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="Vmw-4h-e4y">
             <objects>
-                <viewController id="EPb-jO-91d" sceneMemberID="viewController">
+                <viewController id="EPb-jO-91d" customClass="FirstViewController" customModule="TabbarEx" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="irY-Rw-U58"/>
                         <viewControllerLayoutGuide type="bottom" id="7T8-gP-6mE"/>
@@ -118,6 +118,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="1번 누름"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="EPb-jO-91d" eventType="touchUpInside" id="g3Z-bm-93U"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0z-iS-sxE">
                                 <rect key="frame" x="81" y="473" width="212" height="43"/>
@@ -130,6 +133,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="Pcs-Gi-Hp3"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="U0z-iS-sxE" id="B43-cP-ywe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P7E-Cn-klY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
